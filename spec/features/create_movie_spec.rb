@@ -10,7 +10,7 @@ describe "Creating movies" do
 
 		fill_in "Title", with: "New Movie Title"
 		fill_in "Description", with: "Saving the world."
-		fill_in "Rating", with: "PG-13"
+		select "PG-13", :from => "movie_rating"
 		select (Time.now.year - 1).to_s, :from => "movie_released_on_1i"
 		fill_in "Cast", with: "The award winning cast"
 		fill_in "Director", with: "The ever_creative director"
